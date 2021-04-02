@@ -9,6 +9,7 @@ import { StarComponent } from './star/star.component';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error-404/error-404.component';
+import { CourseInfoComponent } from './courses/course-info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Error404Component } from './error-404/error-404.component';
     StarComponent,
     ReplacePipe,
     NavBarComponent, // referente a tag <app-nav-bar> menu
-    Error404Component
+    Error404Component,
+    CourseInfoComponent
   ],
   imports: [ //tudo que é módulo é colocado aqui
     BrowserModule,
@@ -29,6 +31,9 @@ import { Error404Component } from './error-404/error-404.component';
         {//objeto de rota
           //url da rota, de acordo com o que for digitado no browser
           path: ''/*o path vazio, diz para o angula quando estiver na porta 4200 raiz*/, redirectTo:'courses' /*vai redirecionar para course*/, pathMatch:'full'
+        },
+        {
+          path:'courses/info/:id', component: CourseInfoComponent
         },
         {//listar
           path:'courses', component:CouseListComponet
