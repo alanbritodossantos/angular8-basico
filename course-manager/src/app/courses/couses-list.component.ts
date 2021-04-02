@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Course } from './course';
 
 @Component({
   selector: 'app-course-list',// vai ser uma tag
   templateUrl: './couses-list.component.html'
 })
-export class CouseListComponet{
+export class CouseListComponet implements OnInit{
 
   courses: Course[] = []; // array(lista) de cursos
 
@@ -14,7 +14,7 @@ export class CouseListComponet{
       {
         id: 1,
         name: 'Angular: Forms',
-        imageUrl: '',
+        imageUrl: '/assets/images/forms.png',
         price: 99.99,
         code: 'XPS-8796',
         duration: 120,
@@ -24,7 +24,7 @@ export class CouseListComponet{
       {
         id: 2,
         name: 'Angular: HTTP',
-        imageUrl:'',
+        imageUrl:'/assets/images/http.png',
         price: 45.99,
         code: 'LKL-1094',
         duration: 80,
