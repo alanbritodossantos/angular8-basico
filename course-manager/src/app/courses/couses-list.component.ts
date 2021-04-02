@@ -3,7 +3,13 @@ import { Course } from './course';
 import { CourseService } from './course.service';
 
 @Component({
-  selector: 'app-course-list',// vai ser uma tag
+  // o select será por link de rotas
+  // foi tirado o seletor por agora vai
+  //quando queremos usar a tag em outro componete ai sim precisar ter o seletor(tag)
+  /*
+  como estamos trabalhando com rotas, o que vai ativar não é mais o seletor e sim a rota que
+  vamos passar lá em cima no url
+  */
   templateUrl: './couses-list.component.html'
 })
 export class CouseListComponet implements OnInit{
