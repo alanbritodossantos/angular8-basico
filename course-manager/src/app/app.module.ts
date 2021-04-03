@@ -3,6 +3,8 @@ import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'; //módulo de rotas do angular
 
+import { HttpClientModule} from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { CouseListComponet } from './courses/couses-list.component';
 import { StarComponent } from './star/star.component';
@@ -24,6 +26,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
   imports: [ //tudo que é módulo é colocado aqui
     BrowserModule,
     FormsModule,
+    HttpClientModule,
 
     // essa array espera um objeto de rota
     RouterModule.forRoot([  // assim que inicializar já vai carragar nossas rotas
