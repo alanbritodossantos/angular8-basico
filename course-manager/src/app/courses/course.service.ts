@@ -9,6 +9,18 @@ export class CourseService {
     retrieveAll(): Course[] {
       return COURSES;
     }
+
+    retrieveById(id: number): Course{
+      //filtrando array-- o find vai analisar o array e buscar a condição que é solicitado comparando 'ID'
+        return COURSES.find((courseIterator:Course) => courseIterator.id === id);
+    }
+
+    save(course: Course): void{
+        if(course.id){
+          const index = COURSES.findIndex((courseIterator:Course)=> courseIterator.id===course.id)
+          COURSES[index] = course;
+        }
+    }
 }
 
 
