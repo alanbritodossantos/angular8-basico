@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router'; //módulo de rotas do angular
 import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { CouseListComponet } from './courses/couses-list.component';
+import { CourseListComponent } from './courses/course-list.component';
 import { StarComponent } from './star/star.component';
 import { ReplacePipe } from './pipe/replace.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -16,7 +16,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CouseListComponet,
+    CourseListComponent,
     StarComponent,
     ReplacePipe,
     NavBarComponent, // referente a tag <app-nav-bar> menu
@@ -39,7 +39,7 @@ import { CourseInfoComponent } from './courses/course-info.component';
           path:'courses/info/:id', component: CourseInfoComponent
         },
         {//listar
-          path:'courses', component:CouseListComponet
+          path:'courses', component:CourseListComponent
         },
         {
           path:'**', component: Error404Component /*o '**' signigica quando não encontrar uma rota(url)*/

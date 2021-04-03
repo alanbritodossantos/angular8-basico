@@ -10,9 +10,9 @@ import { CourseService } from './course.service';
   como estamos trabalhando com rotas, o que vai ativar não é mais o seletor e sim a rota que
   vamos passar lá em cima no url
   */
-  templateUrl: './couses-list.component.html'
+  templateUrl: './course-list.component.html'
 })
-export class CouseListComponet implements OnInit{
+export class CourseListComponent implements OnInit{
 
   filteredCourses: Course[] = [];
 
